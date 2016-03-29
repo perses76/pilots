@@ -1,0 +1,15 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="posts" type="posts_type"/>
+
+
+    <xs:simpleType name="posts_format_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="common"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="posts_type">
+        <xs:attribute name="format" type="posts_format_type">
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>

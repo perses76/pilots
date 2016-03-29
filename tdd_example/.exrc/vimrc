@@ -1,0 +1,12 @@
+nnoremap <Leader>r :call Run()<CR>
+
+
+function! Run()
+python << endpython
+import vim
+last_command = "wa |!python {}".format(vim.current.buffer.name)
+print last_command
+vim.command(last_command)
+endpython
+endfunction
+

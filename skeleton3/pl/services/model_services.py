@@ -1,0 +1,2 @@
+class ModelServices(object):
+    pass

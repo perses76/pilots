@@ -1,0 +1,8 @@
+<root 
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:n="base.xml"
+>
+    <xi:include href="base.xml"/>
+    <n:hello_world/>
+</root>
+

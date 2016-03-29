@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ext:Footer xmlns:extu="rebelrunner_unformatted.xsd" xmlns:ext="rebelrunner.xsd">
+
+        <ext:list>
+              <ext:list_item>
+                    <ext:link href="link" target="_blank">ABOUT</ext:link>
+                    <extu:posts source_url="_most-popular" limit="10"/>
+              </ext:list_item>
+        </ext:list>
+    </ext:Footer>

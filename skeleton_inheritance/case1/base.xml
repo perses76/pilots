@@ -1,0 +1,5 @@
+<root
+    xmlns:n="base.xml"
+>
+    <n:hello_world/>
+</root>

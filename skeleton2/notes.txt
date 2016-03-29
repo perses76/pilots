@@ -1,0 +1,11 @@
+*. LibFactory for each project - DONE!
+
+*. Search sources with diff params
+*. join call to same source
+*. section_url  is expression
+*. node_handler respository
+*. filters
+*. output connected to handlers (or to renders???)
+*. Test for formatter??? May  be Driver aproach
+*. Context everywhere
+*. Bootstrap process

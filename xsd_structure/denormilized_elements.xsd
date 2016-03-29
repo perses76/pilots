@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    >
+
+    <xs:element name="skeleton">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:any namespace="##any" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="user_info"/>
+
+    <xs:element name="blocks" type="BlocksType"/>
+    <xs:complexType name="BlocksType">
+        <xs:sequence>
+            <xs:element ref="block_abstract" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="block_abstract" type="BlockTypeAbstract" abstract="true"/>
+    <xs:complexType name="BlockTypeAbstract"/>
+
+    <xs:element name="block" type="BlockType" substitutionGroup="block_abstract"/>
+    <xs:complexType name="BlockType">
+        <xs:complexContent>
+            <xs:extension base="BlockTypeAbstract">
+                <xs:sequence>
+                    <xs:any namespace="##any" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="name" use="required" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="rule" substitutionGroup="block_abstract">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="BlockTypeAbstract">
+                    <xs:attribute name="color"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

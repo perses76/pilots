@@ -1,0 +1,12 @@
+
+nnoremap <Leader>r :call RunProject()<CR>
+
+
+function! RunProject()
+python << endpython
+
+last_test_command = "wa |!python main.py"
+vim.command(last_test_command)
+
+endpython
+endfunction

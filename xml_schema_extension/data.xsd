@@ -1,0 +1,16 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:skd="http://www.ascc.net/xml/schematron" >
+
+    <xs:annotation>
+        <xs:appinfo>
+            <skd:transformation base="common.xsd">
+                <xsl:stylesheet version="1.0"
+                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+
+                </xsl:stylesheet>
+            </skd:transformation>
+        </xs:appinfo>
+    </xs:annotation>
+
+</xs:schema>

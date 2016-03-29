@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.rebelmouse.com/xml_schemas/roar/runner/hometemplates/editor/v0001.xsd" 
+    >
+
+    <xs:redefine schemaLocation="denormilized_elements.xsd">
+        <xs:complexType name="BlockType">
+            <xs:complexContent>
+                <xs:extension base="BlockType">
+                    <xs:attribute name="removable"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:redefine>
+
+    <xs:element name="comment"/>
+
+</xs:schema>

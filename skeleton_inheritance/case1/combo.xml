@@ -1,0 +1,15 @@
+<root>
+    <!-- origin_base start -->
+    <root1>
+        <block name="hello_world" source="base">
+            <text>Hello world</text>
+        </block>
+        <hello_world/>
+    </root1>
+    <!-- origin_base end -->
+    <block name="hello_world" source="page">
+        <super/>
+        <text> - extension</text>
+    </block>
+    <hello_world/>
+</root>

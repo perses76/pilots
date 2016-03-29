@@ -1,0 +1,9 @@
+<root>
+   <namespace prefix="n" uri="base.xml"/>
+   <blocks>
+        <block name="n:hello_world">
+            <text>Hello world</text>
+        </block>
+   </blocks>
+    <n:hello_world/>
+</root>

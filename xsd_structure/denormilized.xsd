@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.rebelmouse.com/xml_schemas/roar/runner/hometemplates/v0001.xsd" 
+    >
+
+    <xs:include schemaLocation="denormilized_elements.xsd"/>   
+
+</xs:schema>

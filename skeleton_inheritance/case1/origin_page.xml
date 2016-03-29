@@ -1,0 +1,11 @@
+<root>
+    <import_xml path="base.xml" />
+    <namespace prefix="t" uri="base.xml"/>
+    <blocks>
+        <block name="t:hello_world">
+            <super/>
+            <text> - extension</text>
+        </block>
+    </blocks>
+    <t:hello_world/>
+</root>

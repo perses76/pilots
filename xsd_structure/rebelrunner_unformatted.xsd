@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="rebelrunner_unformatted.xsd"
+    xmlns="rebelrunner_unformatted.xsd"
+    xmlns:rr="rebelrunner.xsd"
+    xmlns:sk="skeleton.xsd"
+    >
+
+    <xs:import namespace="rebelrunner.xsd" schemaLocation="rebelrunner.xsd"/>
+
+
+    <xs:element name="posts" type="PostsType"/>
+    <xs:complexType name="PostsType">
+        <xs:complexContent>
+            <xs:extension base="sk:PostsType">
+                <xs:attribute name="source_url" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType> 
+
+
+</xs:schema>

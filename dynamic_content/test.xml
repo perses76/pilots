@@ -1,0 +1,6 @@
+<root>
+    <compositei name='test'>
+        <hello_world/>
+    <block attr1="val1" attr2="val2"/>
+    <block2>This is test</block2>
+</root>

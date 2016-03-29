@@ -1,0 +1,11 @@
+<blocks>
+    <block name="Footer" removable="false" rules_for="Link">
+        <comment>This is just comment</comment>
+        <list removable="false">
+              <list_item>
+                    <link href="link" target="_blank">ABOUT</link>
+                    <posts source_url="_most-popular" limit="10"/>
+              </list_item>
+        </list>
+    </block>
+</blocks>
