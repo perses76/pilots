@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:extu="rebelrunner_unformatted.xsd" 
-    xmlns:ext="rebelrunner.xsd" 
-    xmlns="skeleton.xsd" 
+    xmlns="rebelrunner_unformatted.xsd" 
     >
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
@@ -26,19 +24,19 @@
     </xsl:template>
 
     <xsl:template match="block[@name='Footer']">
-        <ext:Footer>
+        <Footer strong_type_block="true">
             <xsl:apply-templates />
-        </ext:Footer>
+        </Footer>
     </xsl:template>
 
     <xsl:template match="posts">
-        <xsl:element name="extu:{name()}">
+        <xsl:element name="{name()}">
             <xsl:apply-templates select="@*|node()"/>
         </xsl:element>
     </xsl:template>
 
     <xsl:template match="list | list_item | link">
-        <xsl:element name="ext:{name()}">
+        <xsl:element name="{name()}">
             <xsl:apply-templates select="@*|node()"/>
         </xsl:element>
     </xsl:template>

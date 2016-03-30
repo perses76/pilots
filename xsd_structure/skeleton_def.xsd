@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="skeleton">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:any/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="blocks" type="BlocksType"/>
+    <xs:complexType name="BlocksType">
+        <xs:sequence>
+            <xs:element ref="block_abstract" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="block_abstract" type="BlockTypeAbstract" abstract="true"/>
+    <xs:complexType name="BlockTypeAbstract"/>
+
+    <xs:element name="block" type="BlockType" substitutionGroup="block_abstract"/>
+    <xs:complexType name="BlockType">
+        <xs:complexContent>
+            <xs:extension base="BlockTypeAbstract">
+                <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:any namespace="##any" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="name" use="required" type="xs:string"/>
+                <xs:attribute name="strong_type_block" type="StrongTypeBlock"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="StrongTypeBlock">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="a" />
+    <xs:element name="not_allowed" />
+
+    <xs:element name="posts" type="PostsType"/>
+    <xs:complexType name="PostsType">
+        <xs:attribute name="source" type="xs:string"/>
+        <xs:attribute name="limit" type="xs:string"/>
+    </xs:complexType>
+
+</xs:schema>

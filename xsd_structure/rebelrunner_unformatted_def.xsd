@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    <xs:redefine schemaLocation="rebelrunner_def.xsd">
+        <xs:complexType name="PostsType">
+            <xs:complexContent>
+                <xs:extension base="PostsType">
+                    <xs:attribute name="source_url" type="xs:string"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:redefine>
+
+
+</xs:schema>

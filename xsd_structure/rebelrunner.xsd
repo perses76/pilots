@@ -3,42 +3,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="rebelrunner.xsd"
     xmlns="rebelrunner.xsd"
-    xmlns:base="skeleton.xsd"
     >
 
-    <xs:import namespace="skeleton.xsd" schemaLocation="skeleton.xsd"/>
-
-    <xs:element name="Footer" type="FooterType" substitutionGroup="base:block_abstract"/>
-    <xs:complexType name="FooterType">
-        <xs:complexContent>
-            <xs:extension base="base:BlockTypeAbstract">
-                <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                    <xs:element ref="list"/>
-                </xs:sequence>
-                <xs:attribute name="strong_block_type" type="base:StrongTypeBlock" use="required"/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:element name="list" type="ListType"/>
-    <xs:complexType name="ListType">
-        <xs:sequence minOccurs="0" maxOccurs="unbounded">
-            <xs:element ref="list_item"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:element name="list_item" type="ListItemType"/>
-    <xs:complexType name="ListItemType">
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:any />
-        </xs:choice>
-    </xs:complexType>
-
-    <xs:element name="link" type="LinkType"/>
-    <xs:complexType name="LinkType" mixed="true">
-        <xs:attribute name="href" type="xs:string"/>
-        <xs:attribute name="target" type="xs:string"/>
-    </xs:complexType>
-
+    <xs:include schemaLocation="rebelrunner_def.xsd"/>
 
 </xs:schema>

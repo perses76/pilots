@@ -3,7 +3,7 @@ from lxml import etree
 
 def main():
     # rebelrunner_unformatted_xml = load_xml('rebelrunner_unformatted.xml')
-    # validate(rebelrunner_unformatted_xml, 'rebelrunner.xsd')
+    # validate(rebelrunner_unformatted_xml, 'rebelrunner_unformatted_def.xsd')
     # return
 
     print "Editor xml"
@@ -15,7 +15,6 @@ def main():
 
     print "rebelrunner"
     rebelrunner_xml = transform(rebelrunner_unformatted_xml, 'formatters.xsl', output_xsd_path='rebelrunner.xsd')
-
 
     print "Footer custom block transfromation"
     footer_xpath = etree.ETXPath('//{rebelrunner.xsd}Footer')
